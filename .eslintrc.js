@@ -15,6 +15,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
+  plugins: [
+    'no-only-tests',
+  ],
   rules: {
     indent: [
       'error',
@@ -44,6 +47,10 @@ module.exports = {
     'eol-last': [
       'error',
       'always'
-    ]
+    ],
+    "no-only-tests/no-only-tests": [
+      "error",
+      { block: ['test', 'it', 'describe'] }
+    ],
   }
 };

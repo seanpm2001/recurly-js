@@ -28,7 +28,7 @@ describe('PaypalCompleteStrategy', function () {
     this.sandbox.restore();
   });
 
-  describe('attach', function () {
+  describe.only('attach', function () {
     it('creates a frame and appends finish URL to the redirect URL', function () {
       const { strategy, target, recurly } = this;
       strategy.attach(target);
